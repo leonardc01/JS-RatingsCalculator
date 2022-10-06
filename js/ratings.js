@@ -9,8 +9,7 @@ function collect_ratings() {
     const elements = document.querySelectorAll('.rating')
 
     elements.forEach(element => {
-        let res = element.id.replace('star', '')
-        rating = parseInt(res)
+        rating = parseInt(element.id.replace('star'))
         ratings.count += parseInt(element.value)
         ratings.sum += parseInt(element.value * rating)
     });
